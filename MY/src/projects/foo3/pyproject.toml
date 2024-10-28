@@ -1,0 +1,30 @@
+[project]
+name = "foo3"
+version = "0.1"
+description = ""
+readme = "README.md"
+authors = [{name = "Bryan Hann"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/bryanhann/foo3"
+Changelog = "https://github.com/bryanhann/foo3/releases"
+Issues = "https://github.com/bryanhann/foo3/issues"
+CI = "https://github.com/bryanhann/foo3/actions"
+
+[project.scripts]
+foo3 = "foo3.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]

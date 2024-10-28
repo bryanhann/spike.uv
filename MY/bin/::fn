@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+source fun.sh
+
+::ls () { for xx in $(ls $1); do echo $1/$xx; done; }
+::basename () { echo $(basename $1);  }
+::pushd () { pushd $1 > /dev/null 2> /dev/null || return 1; }
+::popd ()  { popd $1 > /dev/null 2> /dev/null; }
+

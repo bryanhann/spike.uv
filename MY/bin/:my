@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source ::fn
+source :io
+
+PROJECTS=${MY_TMP}/projects
+
+:my:list:projects () { ::ls ${MY}/src/projects ; }
+
+:my:copy:prj () {
+    dst=${PROJECTS}/$(basename ${1})
+    echo "[${FUNCNAME[0]}]: $(io.my ${1}) -->  $(io.tmp ${dst})"
+    cp -r ${1} ${dst}
+}
+

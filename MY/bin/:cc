@@ -1,0 +1,13 @@
+cc.create () {
+    echo About to create an app named [$1].
+    echo Be sure to use that when asked.
+    echo Press enter to continue
+    read
+    uvx cookiecutter gh:simonw/click-app
+    #uv vendv
+    #uv init
+    #uv add #./$1
+    #uv sync
+    #uv run $1
+}
+

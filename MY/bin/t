@@ -1,0 +1,3 @@
+. ../my.activate 
+echo ${MY_TMP}
+my.test

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+source :init
+
+:init:reset
+:init:projects
+:init:tmp
+
+cd ${MY_TMP}
+uv run foo3
+uv run foo1

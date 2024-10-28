@@ -1,0 +1,4 @@
+echo ++my.test
+my.build
+echo 78777 ${MY_TMP}
+echo --my.test

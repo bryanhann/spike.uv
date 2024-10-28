@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+io.tmp () { echo [TMP]${1:${#MY_TMP}}; }
+io.my () { echo [MY]${1:${#MY}}; }
+
+

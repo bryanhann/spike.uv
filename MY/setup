@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+[ .$MY == . ] && echo activate first
+[ .$MY == . ] && exit
+
+main () {
+    _clone () {
+        dst=${VENDOR}/$(basename $1)
+        [ -d ${dst} ] || git clone $1 $dst
+    }
+    local VENDOR=${MY}/.vendor
+    local BIN=${MY}/bin/.vendor
+    [ $1. == --clean. ] && rm -rf ${VENDOR}
+    rm -rf ${BIN}
+    mkdir  ${BIN}
+    _clone http://github.com/ssledz/bash-fun
+    _clone https://github.com/bats-core/bats-core
+    ln -s ${VENDOR}/bats-core/bin/bats ${BIN}/bats
+    ln -s ${VENDOR}/bash-fun/src/fun.sh ${BIN}/fun.sh
+}
+main $@

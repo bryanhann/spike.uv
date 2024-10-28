@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source ::fn
+source :my
+
+:tmp.prj4name () { echo ${PROJECTS}/$1; }
+:tmp:list:projects () { :my:list:projects | map ::basename | map :tmp.prj4name $; }
